@@ -1,0 +1,226 @@
+/* *********************************************************************************************
+
+How to Create CSS3 + jQuery Accordion Menu [Tutorial]
+"How to Create CSS3 + jQuery Accordion Menu" that was specially made for DesignModo by our friend Valeriu Timbuc. 
+
+Links:
+http://vtimbuc.net/
+https://twitter.com/vtimbuc
+http://designmodo.com/futurico
+http://vladimirkudinov.com
+http://rockablethemes.com
+
+********************************************************************************************* */
+
+/* Reset */
+
+.accordion,
+.accordion ul,
+.accordion li,
+.accordion a,
+.accordion span.arrow-icon {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+.accordion li {
+	list-style: none;
+	margin:0 0 20px 0;
+}
+
+/* Layout & Style */
+
+.accordion li > a {
+	display: block;
+	position: relative;
+	min-width: 110px;
+	padding:10px 10px 10px 20px;
+	font-size:15px;
+	min-height:40px;
+	color: #626262;
+	text-decoration: none;
+	background: #f8f8f8;
+	border:1px solid #e7e7e7;
+}
+.accordion li > a div.select-title {
+	font-size:18px;
+	width:720px;
+}
+.accordion li > a div.select-title .select-tool {
+	position:absolute;
+	top:10px;
+	right:80px;
+}
+.accordion li > a div.select-title .select-tool .status-no-completed {
+	font-size:14px;
+	font-weight:100;
+	text-align:right;
+	margin-bottom:10px;	
+	color:#e60012;
+}
+
+.accordion li > a div.select-title .select-tool .status-completed {
+	font-size:14px;
+	font-weight:100;
+	text-align:right;
+	margin-bottom:10px;
+	color:#0179af;
+}
+.accordion li > a div.select-p {
+	font-size:14px;
+	padding:0 0 0 20px;
+	margin:5px 0;
+}
+
+.accordion li > a div.select-enddate {
+	font-size:12px;
+	padding:0 0 0 20px;
+	color:#e60012;
+
+}
+
+
+.accordion > li:hover > a{
+	color: #313131;
+	text-shadow: 1px 1px 1px rgba(255,255,255, .2);
+	/*background: url(../img/active.png) repeat-x;*/
+	background: #ebebeb;
+}
+
+.accordion > li:target > a,
+.accordion > li > a.active {
+	color: #313131;
+	font-weight:bold;
+	/*background: url(../img/active.png) repeat-x;*/
+	background: #f8c7a6;
+	border:1px solid #eeb38d;
+}
+
+.accordion li > a span.arrow-icon {
+	display: block;
+	position: absolute;
+	top:15px;
+	right:10px;
+	padding: 0 10px;
+	margin-right: 10px;
+	width:23px;
+	height:13px;
+	background-image:url(../images/arrow-down.png);
+	background-repeat:no-repeat;
+}
+
+
+.accordion > li:hover > a span.arrow-icon,
+.accordion > li:target > a span.arrow-icon{
+	color: #f23167;
+}
+
+.accordion > li > a.active span.arrow-icon {
+	color: #f23167;
+	background-image:url(../images/arrow-up.png);
+	background-repeat:no-repeat;
+}
+
+/* Images */
+
+.accordion > li > a:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 24px;
+	height: 24px;
+	margin: 4px 8px;
+}
+
+.accordion li.files > a:before { background-position: 0px 0px; }
+.accordion li.files:hover > a:before,
+.accordion li.files:target > a:before,
+.accordion li.files > a.active:before { background-position: 0px -24px; }
+
+.accordion li.nav > a:before { background-position: -24px 0px; }
+.accordion li.nav:hover > a:before,
+.accordion li.nav:target > a:before,
+.accordion li.nav > a.active:before { background-position: -24px -24px; }
+
+.accordion li.cloud > a:before { background-position: -48px 0px; }
+.accordion li.cloud:hover > a:before,
+.accordion li.cloud:target > a:before,
+.accordion li.cloud > a.active:before { background-position: -48px -24px; }
+
+.accordion li.sign > a:before { background-position: -72px 0px; }
+.accordion li.sign:hover > a:before,
+.accordion li.sign:target > a:before,
+.accordion li.sign > a.active:before { background-position: -72px -24px; }
+
+/* Sub Menu */
+.sub-menu div.sub-content {
+	background-color:#fcdfcc;
+	padding:10px;
+	border:1px solid #eeb38d;
+	border-top:none;
+}
+.sub-menu div.sub-content h4 {
+	font-size:16px;
+	margin-left:10px;
+	font-weight:600;
+}
+.sub-menu div.sub-content .cs-scholarships  {
+	padding-bottom:10px;
+	margin-bottom:20px;
+	border-bottom:1px dashed #b5b5b5;
+}
+.sub-menu div.sub-content .cs-scholarships:last-child {
+	border-bottom:0px dashed #b5b5b5;
+}
+.sub-menu div.sub-content .cs-scholarships p {
+	font-size:14px;
+	margin-left:10px;
+	margin-right:10px;
+}
+.sub-menu div.sub-content .cs-scholarships ol li {
+	list-style:outside;
+	margin:5px 15px 5px 50px;
+}
+.sub-menu div.sub-content .cs-scholarships  button {
+	margin:10px 0 10px 10px;
+}
+.sub-menu li a {
+	color: #535353;
+	background: #f60;
+	border-bottom: 1px solid #c9c9c9;
+}
+
+.sub-menu li:hover a { background: #efefef; }
+
+.sub-menu li:last-child a { border: none; }
+
+.sub-menu li > a span.arrow-icon {
+	color: #f23167;
+	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+	background: #fff;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.sub-menu em {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 14px;
+	color: #a6a6a6;
+	font: normal 10px/32px Arial, sans-serif;
+}
+
+/* Functionality */
+
+.accordion li > .sub-menu {
+	display: none;
+}
+
+.accordion li:target > .sub-menu {
+	display: block;
+}

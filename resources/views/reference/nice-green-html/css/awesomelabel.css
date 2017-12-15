@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.awesomelabel-params-css {
+	outline:none;
+	background:transparent;
+	border:none;
+	border-bottom:2px solid cornflowerblue;
+	color:gray;
+}
+
+.awesomelabel-params-css:focus {
+ 	border-color:lightgray;
+}
+
+.awesomelabel-params-css:focus ~ label {
+	color:#f60;
+}
+
+.awesomelabel-params-css-input-group label {
+	font-family:georgia;
+	font-size:1.2em;
+	font-style:italic;
+	color:#bbb;
+}
+

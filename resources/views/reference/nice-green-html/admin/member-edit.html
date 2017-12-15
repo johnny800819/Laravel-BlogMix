@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NICE GREEN美蔬菜廚房-後台管理</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Data Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/skin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="profile-element"><img src="img/logo.png" width="220" height="155"></li>
+                <li class="active"><a href="member-list.html"><span class="nav-label">會員列表</span> </a></li>
+                <li><a href="service-list.html"><span class="nav-label">客服列表</span></a></li>
+                <li><a href="cooperation-list.html"><span class="nav-label">合作提案</span></a></li>
+                <li><a href="order-list.html"><span class="nav-label">訂單列表</span></a></li>
+                <li><a href="admin-list.html"><span class="nav-label">管理者列表</span></a></li>
+                <li>
+                    <a href="#"><span class="nav-label">好商品管理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li ><a href="product-category-0.html">主類別管理</a></li>
+                        <li ><a href="product-category-1.html">次類別管理</a></li>
+                        <li ><a href="product-list.html">商品列表</a></li>
+                        <li ><a href="product-ad-list.html">廣告列表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="nav-label">好文章管理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li ><a href="article-category-0.html">主類別管理</a></li>
+                        <li ><a href="article-category-1.html">次類別管理</a></li>
+                        <li ><a href="article-list.html">文章列表</a></li>
+                        <li ><a href="article-ad-list.html">廣告列表</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="img-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">admin</span>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>編輯會員</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">首頁</a>
+                        </li>
+                        <li>
+                            <a href="index.html">會員列表</a>
+                        </li>
+                        <li class="active">
+                            <strong>編輯會員</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+<div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-7">
+                </div>
+                <div class="col-lg-5">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>編輯會員</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <form method="get" class="form-horizontal">
+                                <div class="form-group"><label class="col-sm-2 control-label">暱稱</label>
+
+                                    <div class="col-sm-10"><p class="form-control-static">xxxx</div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">名稱</label>
+
+                                    <div class="col-sm-10"><p class="form-control-static">xxxx</div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">帳號</label>
+                                    <div class="col-sm-10"><p class="form-control-static">email@example.com</p>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">生日</label>
+                                    <div class="col-sm-10"><p class="form-control-static">1979-04-04</p>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">密碼</label>
+
+                                    <div class="col-sm-10"><input type="password" class="form-control" name="password"></div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">確認密碼</label>
+
+                                    <div class="col-sm-10"><input type="password" placeholder="" class="form-control"></div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">地址</label>
+
+                                    <div class="col-sm-2">
+                                        <select class="form-control">
+                                          <option>縣市</option>
+                                          <option>2</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                        <select class="form-control">
+                                          <option>鄉鎮市區</option>
+                                          <option>2</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">是否啓用</label>
+
+                                    <div class="col-sm-10">
+                                    <label class="radio-inline"><input type="radio" value="" id="" name="optionsRadios" checked=""> 是 </label> 
+                                    <label class="radio-inline"><input type="radio" value="" id="" name="optionsRadios"> 否 </label>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">性別</label>
+                                    <div class="col-sm-10"><p class="form-control-static">男</p>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">註冊時間</label>
+                                    <div class="col-sm-10"><p class="form-control-static">2016-07-27 15:15:21</p>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">登入次數</label>
+                                    <div class="col-sm-10"><p class="form-control-static">4</p>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">最後登入時間</label>
+                                    <div class="col-sm-10"><p class="form-control-static">2016-07-27 15:15:21</p>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-2 control-label">登入IP</label>
+                                    <div class="col-sm-10"><p class="form-control-static">59.124.85.123</p>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        <button class="btn btn-success" type="submit">存檔</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        <div class="footer">
+            <div>
+                <strong>Copyright</strong> © Protype All Rights Reserved
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+
+    <!-- Data Tables -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+            $('.dataTables-example').dataTable({
+                responsive: true,
+                "dom": 'T<"clear">lfrtip',
+                "tableTools": {
+                    "sSwfPath": "js/plugins/dataTables/swf/copy_csv_xls_pdf.swf"
+                }
+            });
+
+            /* Init DataTables */
+            var oTable = $('#editable').dataTable();
+
+            /* Apply the jEditable handlers to the table */
+            oTable.$('td').editable( '../example_ajax.php', {
+                "callback": function( sValue, y ) {
+                    var aPos = oTable.fnGetPosition( this );
+                    oTable.fnUpdate( sValue, aPos[0], aPos[1] );
+                },
+                "submitdata": function ( value, settings ) {
+                    return {
+                        "row_id": this.parentNode.getAttribute('id'),
+                        "column": oTable.fnGetPosition( this )[2]
+                    };
+                },
+
+                "width": "90%",
+                "height": "100%"
+            } );
+
+
+        });
+
+        function fnClickAddRow() {
+            $('#editable').dataTable().fnAddData( [
+                "Custom row",
+                "New row",
+                "New row",
+                "New row",
+                "New row" ] );
+
+        }
+    </script>
+<style>
+    body.DTTT_Print {
+        background: #fff;
+
+    }
+    .DTTT_Print #page-wrapper {
+        margin: 0;
+        background:#fff;
+    }
+
+    button.DTTT_button, div.DTTT_button, a.DTTT_button {
+        border: 1px solid #e7eaec;
+        background: #fff;
+        color: #676a6c;
+        box-shadow: none;
+        padding: 6px 8px;
+    }
+    button.DTTT_button:hover, div.DTTT_button:hover, a.DTTT_button:hover {
+        border: 1px solid #d2d2d2;
+        background: #fff;
+        color: #676a6c;
+        box-shadow: none;
+        padding: 6px 8px;
+    }
+
+    .dataTables_filter label {
+        margin-right: 5px;
+
+    }
+</style>
+</body>
+
+</html>
