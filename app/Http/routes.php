@@ -27,11 +27,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/','Home\HomeController@index');
     Route::get('list','Home\HomeController@ListFun');
     Route::get('new/{art_id}','Home\HomeController@NewFun');
+    Route::get('ranklist','Home\HomeController@ranklist');
     //前台會員Login|Logout控制器
     Route::get('login','Home\MemberController@loginPage');
     Route::post('login','Home\MemberController@login');
     Route::get('logout','Home\MemberController@logout');
     Route::post('register','Home\MemberController@register');
+    //前台測試
+    Route::get('smoole','Home\HomeController@smoole');
 
     //後台登入控制器
     Route::any('admin/login','Admin\AdminController@index');

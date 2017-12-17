@@ -65,10 +65,21 @@ class HomeController extends Controller
         return view('Home.Article.new')->with(compact('data'));
     }
 
+    public function smoole()
+    {
+        return view('smoole');
+    }
+
+    public function ranklist()
+    {
+        $data = blog_article::orderby('art_view','desc')->get();
+        return view('Home.Article.ranking-list')->with(compact('data'));
+    }
+
     public function test()
     {
         //echo phpinfo();
         //return view('GAtest');
-        return view('smoole');
+        //return view('smoole');
     }
 }

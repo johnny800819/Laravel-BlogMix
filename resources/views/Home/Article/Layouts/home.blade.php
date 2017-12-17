@@ -174,7 +174,8 @@
             @endif
             <ul style="margin-left: 140px; position:relative;">
                 <li class="pt25"><a href="{{url('/list')}}"><img src="{{asset('org/Home/Article/images/icon1.png')}}" width="47" height="46"><span>全部文章</span></a></li>
-                <li class="pt25"><a href="product-index.html"><img src="{{asset('org/Home/Article/images/icon2.png')}}" width="47" height="46"><span>商品功能（尚未完成）</span></a></li>
+                {{--<li class="pt25"><a href="product-index.html"><img src="{{asset('org/Home/Article/images/icon2.png')}}" width="47" height="46"><span>商品功能（尚未完成）</span></a></li>--}}
+                <li class="pt25"><a href="{{url('/smoole')}}"><img src="{{asset('org/Home/Article/images/icon2.png')}}" width="47" height="46"><span>聊天室</span></a></li>
                 <li class="pt25"><a href="{{url('/')}}"><img src="{{asset('org/Home/Article/images/icon3.png')}}" width="47" height="46"><span>返回首頁</span></a></li>
 
                 @if(session('status') != 'login')
@@ -186,7 +187,7 @@
                     </a>
                 </li>
                 <li class="pt25"><a href="{{url('/login')}}"><img src="{{asset('org/Home/Article/images/icon5.png')}}" width="47" height="46"><span>登入/註冊</span></a></li>
-                <li class="pt25"><a href="ranking-list.html"><img src="{{asset('org/Home/Article/images/icon6.png')}}" width="47" height="46"><span>熱門文章</span></a></li>
+                <li class="pt25"><a href="{{url('/ranklist')}}"><img src="{{asset('org/Home/Article/images/icon6.png')}}" width="47" height="46"><span>熱門文章</span></a></li>
 
                 <!--登出_結束-->
                 @else
