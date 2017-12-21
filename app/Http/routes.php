@@ -40,7 +40,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::any('admin/login','Admin\AdminController@index');
 
 
-    Route::get('test','Home\HomeController@test');
+    Route::any('test','Home\HomeController@test');
+    Route::any('test2','Home\HomeController@test2');
 });
 
 Route::group(['middleware' => ['web','auth']], function () {
@@ -50,9 +51,13 @@ Route::group(['middleware' => ['web','auth']], function () {
     Route::get('member-add-service','Home\MemberController@member_add_service');
     Route::post('member-add-service','Home\MemberController@mad_action');
     Route::get('member-re-service','Home\MemberController@member_re_service');
+    Route::get('member-order-list','Home\MemberController@member_order_list');
+    Route::post('member-order-detail/{id}','Home\MemberController@member_order_detail');
     //前台購物車控制器
     Route::resource('cart','Home\CartController');
-    Route::resource('order','Home\OrderController');
+    Route::post('confirm','Home\OrderController@confirm');
+    Route::any('order','Home\OrderController@order');
+    Route::any('order-complete','Home\OrderController@order_complete');
 });
 
 Route::group(['middleware' => ['web','admin.login'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {

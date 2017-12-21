@@ -19,6 +19,7 @@ class blog_cart extends Model
     public function cartItems()
     {
         //blog_cart與blog_cart_item的一對多關係
-        return $this->hasMany('App\Http\Model\blog_cart_item', 'cart_id', 'cart_id');
+        return $this->hasMany('App\Http\Model\blog_cart_item', 'cart_id', 'cart_id')
+                    ->orderBy('product_id','asc');
     }
 }

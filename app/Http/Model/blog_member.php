@@ -16,4 +16,11 @@ class blog_member extends Model implements Authenticatable,CanResetPassword
     protected $primaryKey = 'id';
     public $timestamps = false;
     protected $guarded = [];
+
+    public function get_order_list($id)
+    {
+        return $this->join('blog_order', 'blog_member.id', '=', 'blog_order.order_member')
+                    ->where('blog_member.id', '=', $id)
+                    ->paginate(5);
+    }
 }

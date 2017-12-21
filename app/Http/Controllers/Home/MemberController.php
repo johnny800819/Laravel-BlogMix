@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Model\blog_member;
+use App\Http\Model\blog_order;
+use App\Http\Model\blog_order_item;
 use App\Http\Model\blog_servicelist;
 use Illuminate\Http\Request;
 
@@ -219,5 +221,21 @@ class MemberController extends HomeController
     {
         $data = blog_servicelist::where('slist_user_id',Auth::user()->id)->orderby('slist_time','desc')->paginate(4);
         return view('Home.Member.member-re-service')->with(compact('data'));
+    }
+
+    public function member_order_list()
+    {
+        //取得此會員訂單資料
+        $obj = new blog_member();
+        $data = $obj->get_order_list(Auth::user()->id);
+
+        return view('Home.Member.member-order-list')->with(compact('data'));
+    }
+
+    public function member_order_detail($order_id)
+    {
+        $order_item = blog_order_item::join('blog_article','blog_order_item.oi_item_id','=','blog_article.art_id')->where('oi_order_id',$order_id)->get();
+        $order = blog_order::where('order_id',$order_id)->first();
+        return view('Home.Member.member-order-detail')->with(compact('order_item','order'));
     }
 }

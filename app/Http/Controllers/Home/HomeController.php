@@ -81,5 +81,11 @@ class HomeController extends Controller
         //echo phpinfo();
         //return view('GAtest');
         //return view('smoole');
+        return view('ECPayAIO_PHP.AioSDK.example.sample_All_CreateOrder');
+    }
+
+    public function test2()
+    {
+        return view('ECPayAIO_PHP.AioSDK.example.simple_ServerReplyPaymentStatus');
     }
 }

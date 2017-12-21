@@ -30,7 +30,7 @@
                                 <li><a href="{{url('/member-profile')}}">會員資料修改</a></li>
                                 <li><a href="{{url('/member-add-service')}}">聯絡客服</a></li>
                                 <li><a href="{{url('/member-re-service')}}">最新客服回覆</a></li>
-                                <li><a href="member-order-list.html">歷史訂單查詢</a></li>
+                                <li><a href="{{url('/member-order-list')}}">歷史訂單查詢</a></li>
                             </ul>
                         </div>
                     </div>
