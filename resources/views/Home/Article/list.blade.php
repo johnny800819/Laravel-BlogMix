@@ -51,6 +51,7 @@
                                                 <span class="mr5"><i class="fa fa-clock-o mr5" aria-hidden="true"></i>{{$art->art_time}}</span>
                                                 <span><i class="fa fa-eye mr5" aria-hidden="true"></i>{{$art->art_view}}人</span>
                                             </div>
+                                            @if(\Illuminate\Support\Facades\Auth::check())
                                             <div>
                                                 <a href="javascript:
                                                 $.ajax({
@@ -66,6 +67,7 @@
                                                 });
                                                 "><button type="button" class="btn btn-warning">加入購物車</button></a>
                                             </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

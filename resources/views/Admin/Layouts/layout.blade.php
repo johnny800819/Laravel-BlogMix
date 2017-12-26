@@ -22,6 +22,10 @@
 
 <!-- Mainly scripts -->
 <script src="{{asset('js/jquery-2.1.1.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="{{asset('js/inspinia.js')}}"></script>
 
 <body>
 <div id="wrapper">
@@ -34,7 +38,7 @@
                 <li><a href="{{url('admin/member')}}"><span class="nav-label">會員列表</span> </a></li>
                 <li><a href="{{url('admin/service-list')}}"><span class="nav-label">客服列表</span></a></li>
                 {{--<li><a href="cooperation-list.html"><span class="nav-label">合作提案</span></a></li>--}}
-                {{--<li><a href="order-list.html"><span class="nav-label">訂單列表</span></a></li>--}}
+                <li><a href="{{url('admin/order-list')}}"><span class="nav-label">訂單列表</span></a></li>
                 <li><a href="{{url('admin/admin-list')}}"><span class="nav-label">管理者列表</span></a></li>
                 {{--<li>--}}
                     {{--<a href="#"><span class="nav-label">好商品管理</span> <span class="fa arrow"></span></a>--}}
@@ -169,7 +173,6 @@
 
 </html>
 
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/plugins/metisMenu/jquery.metisMenu.js')}}"></script>
 <script src="{{asset('js/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
 <script src="{{asset('js/plugins/jeditable/jquery.jeditable.js')}}"></script>
@@ -181,5 +184,4 @@
 <script src="{{asset('js/plugins/dataTables/dataTables.tableTools.min.js')}}"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="{{asset('js/inspinia.js')}}"></script>
 <script src="{{asset('js/plugins/pace/pace.min.js')}}"></script>

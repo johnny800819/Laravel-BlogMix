@@ -82,6 +82,8 @@ Route::group(['middleware' => ['web','admin.login'], 'prefix' => 'admin', 'names
     Route::resource('member','MemberController');
     //後台客服控制器
     Route::resource('service-list','ServiceListController');
+    //後台訂單控制器
+    Route::resource('order-list','OrderListController');
 
     //後台Common控制器
     Route::post('upload','CommonController@upload');
