@@ -1,0 +1,25 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.backup
+.env.production
+*.env
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build
+public/build/
+public/hot/
+public/storage/
+
+# Laravel
+storage/*.key
+.phpunit.result.cache

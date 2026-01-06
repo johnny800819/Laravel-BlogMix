@@ -1,0 +1,310 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*在要作動畫的區塊中,貼入data-position="an-bounceInDown" class="notViewed animBlock"
+Ex:<div data-position="an-bounceInDown" class="notViewed animBlock"></div>
+*/
+
+/** animated boxes **/
+.animBlock {
+  /*display: inline-block;*/
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: relative;
+}
+
+/*捲軸還沒移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInDown"] { 
+	left: 0%;
+}
+
+/*捲軸已經移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInDown"].viewed {
+  left: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  /*-webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;*/
+  -webkit-animation:bounceInDown 0.5s .2s ease both;
+  -moz-animation:bounceInDown 0.5s .2s ease both;
+}
+
+
+
+
+/*捲軸還沒移到位置的關鍵影格*/
+.animBlock[data-position="an-flipInY"] { 
+	left: 0%;
+}
+
+/*捲軸已經移到位置的關鍵影格*/
+.animBlock[data-position="an-flipInY"].viewed {
+  left: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  -webkit-animation:flipInY 1.5s .2s ease both;
+  -moz-animation:flipInY 1.5s .2s ease both;
+}
+
+
+/* Push */
+@-webkit-keyframes push {
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes push {
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+@-webkit-keyframes flipInY{
+	0%{-webkit-transform:perspective(400px) rotateY(90deg);
+	opacity:0}
+	40%{-webkit-transform:perspective(400px) rotateY(-10deg)}
+	70%{-webkit-transform:perspective(400px) rotateY(10deg)}
+	100%{-webkit-transform:perspective(400px) rotateY(0deg);
+	opacity:1}
+}
+@-moz-keyframes flipInY{
+	0%{-moz-transform:perspective(400px) rotateY(90deg);
+	opacity:0}
+	40%{-moz-transform:perspective(400px) rotateY(-10deg)}
+	70%{-moz-transform:perspective(400px) rotateY(10deg)}
+	100%{-moz-transform:perspective(400px) rotateY(0deg);
+	opacity:1}
+}
+
+
+
+@-webkit-keyframes fadeInUp{
+	0%{opacity:0;
+	-webkit-transform:translateY(20px)}
+	100%{opacity:1;
+	-webkit-transform:translateY(0)}
+}
+@-moz-keyframes fadeInUp{
+	0%{opacity:0;
+	-moz-transform:translateY(20px)}
+	100%{opacity:1;
+	-moz-transform:translateY(0)}
+}
+
+
+
+
+
+@-webkit-keyframes fadeIn{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+@-moz-keyframes fadeIn{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+/*由上到下*/
+
+/*捲軸還沒移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInDown"] { 
+	left: 0%;
+}
+
+/*捲軸已經移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInDown"].viewed {
+  left: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  /*-webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;*/
+  -webkit-animation:bounceInDown 0.5s .2s ease both;
+  -moz-animation:bounceInDown 0.5s .2s ease both;
+}
+
+@-webkit-keyframes bounceInDown{
+	0%{opacity:0;
+	-webkit-transform:translateY(-2000px)}
+	60%{opacity:1;
+	-webkit-transform:translateY(30px)}
+	80%{-webkit-transform:translateY(-10px)}
+	100%{-webkit-transform:translateY(0)}
+}
+
+@-moz-keyframes bounceInDown{
+	0%{opacity:0;
+	-moz-transform:translateY(-2000px)}
+	60%{opacity:1;
+	-moz-transform:translateY(30px)}
+	80%{-moz-transform:translateY(-10px)}
+	100%{-moz-transform:translateY(0)}
+}
+
+/*左到右的設定*/
+
+/*捲軸還沒移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInRight"] { 
+	left: 0%;
+}
+
+/*捲軸已經移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInRight"].viewed {
+  left: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  /*-webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;*/
+  -webkit-animation:bounceInRight 0.5s .2s ease both;
+  -moz-animation:bounceInRight 0.5s .2s ease both;
+}
+
+@-webkit-keyframes bounceInRight{
+	0%{opacity:0;
+	-webkit-transform:translatex(-2000px)}
+	60%{opacity:1;
+	-webkit-transform:translatex(30px)}
+	80%{-webkit-transform:translatex(-10px)}
+	100%{-webkit-transform:translatex(0)}
+}
+
+@-moz-keyframes bounceInRight{
+	0%{opacity:0;
+	-moz-transform:translatex(-2000px)}
+	60%{opacity:1;
+	-moz-transform:translatex(30px)}
+	80%{-moz-transform:translatex(-10px)}
+	100%{-moz-transform:translatex(0)}
+}
+
+/*右到左的設定*/
+
+/*捲軸還沒移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInLeft"] { 
+	left: 0%;
+}
+
+/*捲軸已經移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInLeft"].viewed {
+  left: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  /*-webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;*/
+  -webkit-animation:bounceInLeft 0.5s .2s ease both;
+  -moz-animation:bounceInLeft 0.5s .2s ease both;
+}
+
+@-webkit-keyframes bounceInLeft{
+	0%{opacity:0;
+	-webkit-transform:translatex(2000px)}
+	60%{opacity:1;
+	-webkit-transform:translatex(30px)}
+	80%{-webkit-transform:translatex(10px)}
+	100%{-webkit-transform:translatex(0)}
+}
+
+@-moz-keyframes bounceInLeft{
+	0%{opacity:0;
+	-moz-transform:translatex(2000px)}
+	60%{opacity:1;
+	-moz-transform:translatex(30px)}
+	80%{-moz-transform:translatex(10px)}
+	100%{-moz-transform:translatex(0)}
+}
+
+/*由下到上*/
+/*捲軸還沒移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInUp"] { 
+	left: 0%;
+}
+
+/*捲軸已經移到位置的關鍵影格*/
+.animBlock[data-position="an-bounceInUp"].viewed {
+  left: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  /*-webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;*/
+  -webkit-animation:bounceInUp 0.5s .2s ease both;
+  -moz-animation:bounceInUp 0.5s .2s ease both;
+}
+
+@-webkit-keyframes bounceInUp{
+	0%{opacity:0;
+	-webkit-transform:translateY(2000px)}
+	60%{opacity:1;
+	-webkit-transform:translateY(30px)}
+	80%{-webkit-transform:translateY(10px)}
+	100%{-webkit-transform:translateY(0)}
+}
+
+@-moz-keyframes bounceInUp{
+	0%{opacity:0;
+	-moz-transform:translateY(2000px)}
+	60%{opacity:1;
+	-moz-transform:translateY(30px)}
+	80%{-moz-transform:translateY(10px)}
+	100%{-moz-transform:translateY(0)}
+}
+
+/*淡入*/
+/*捲軸還沒移到位置的關鍵影格*/
+.animBlock[data-position="an-fadeInUp"] { 
+	left: 0%;
+}
+
+/*捲軸已經移到位置的關鍵影格*/
+.animBlock[data-position="an-fadeInUp"].viewed {
+  left: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  -webkit-animation:fadeInUp 1s .2s ease both;
+  -moz-animation:fadeInUp 1s .2s ease both;
+}
+
+/*捲軸還沒移到位置的關鍵影格*/
+.animBlock[data-position="an-fadeIn"] { 
+	left: 0%;
+}
+
+/*捲軸已經移到位置的關鍵影格*/
+.animBlock[data-position="an-fadeIn"].viewed {
+  left: 0%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  -webkit-animation:fadeIn 0.5s 0.1s ease both;
+  -moz-animation:fadeIn 0.5s 0.1s ease both;
+}

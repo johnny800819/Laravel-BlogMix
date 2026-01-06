@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --table-font-size: 0.875rem;
+    /* Default: 14px (increased for better readability) */
+}
+
+/* PrimeVue DataTable Spacing Optimization */
+.p-datatable .p-datatable-tbody>tr>td {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    font-size: var(--table-font-size);
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    font-weight: 600;
+    font-size: var(--table-font-size);
+}
+
+/* Apply font size to all important content in table cells, including badges and buttons */
+.p-datatable .p-datatable-tbody>tr>td span,
+.p-datatable .p-datatable-tbody>tr>td a,
+.p-datatable .p-datatable-tbody>tr>td div,
+.p-datatable .p-datatable-tbody>tr>td button {
+    font-size: var(--table-font-size) !important;
+}
+
+.p-datatable .p-datatable-tbody>tr {
+    transition: background-color 0.2s;
+}
+
+.p-datatable .p-datatable-tbody>tr:hover {
+    background-color: #f8fafc !important;
+}
+
+/* Modern Premium Design System */
+
+:root {
+    /* Color Palette - Premium Gradients & Depths */
+    --color-primary: #6366f1;
+    /* Indigo 500 */
+    --color-primary-dark: #4f46e5;
+    /* Indigo 600 */
+    --color-accent: #f43f5e;
+    /* Rose 500 */
+
+    --color-bg-body: #f1f5f9;
+    /* Slate 100 - Darkened from Slate 50 to reduce glare */
+    --color-bg-card: #ffffff;
+    --color-bg-glass: rgba(255, 255, 255, 0.9);
+    /* Increased opacity for less transparency/reflection */
+
+    --color-text-main: #1e293b;
+    /* Slate 800 */
+    --color-text-muted: #64748b;
+    /* Slate 500 */
+    --color-border: #e2e8f0;
+    /* Slate 200 */
+
+    --color-success: #059669;
+    /* Emerald 600 - Darkened from 500 for better contrast */
+    --color-danger: #ef4444;
+    /* Red 500 */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --gradient-hover: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+
+    /* Typography */
+    --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4.5rem;
+    /* Adjusted to 4.5rem based on user feedback (too far vs too close) */
+
+    /* Effects */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    color: var(--color-text-main);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* Utilities */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.items-stretch {
+    align-items: stretch;
+}
+
+.gap-sm {
+    gap: var(--spacing-sm);
+}
+
+.gap-md {
+    gap: var(--spacing-md);
+}
+
+.gap-lg {
+    gap: var(--spacing-lg);
+}
+
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.mb-sm {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+    margin-bottom: var(--spacing-lg);
+}
+
+.mt-xl {
+    margin-top: var(--spacing-xl);
+}
+
+.mb-xl {
+    margin-bottom: var(--spacing-xl);
+}
+
+.my-2xl {
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.p-md {
+    padding: var(--spacing-md);
+}
+
+.p-lg {
+    padding: var(--spacing-lg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-secondary {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.block {
+    display: block;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Components */
+
+/* Button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background: var(--gradient-primary);
+    color: white;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-md);
+    font-size: 1rem;
+}
+
+.btn:hover {
+    filter: brightness(110%);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    background: var(--color-bg-body);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-danger {
+    background: var(--color-danger);
+}
+
+/* Card */
+.card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Subtle border for definition */
+    transition: var(--transition-base);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 0;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.05em;
+}
+
+.nav-link {
+    color: var(--color-text-muted);
+    font-weight: 500;
+    margin-left: var(--spacing-lg);
+    font-size: 0.95rem;
+}
+
+.nav-link:hover,
+.nav-link.router-link-active {
+    color: var(--color-primary);
+}
+
+/* Form Elements */
+.input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg-body);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition-base);
+    color: var(--color-text-main);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    background: white;
+}
+
+label {
+    font-weight: 500;
+    color: var(--color-text-main);
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* PrimeVue ConfirmDialog Global Overrides */
+.p-confirm-dialog {
+    border: none !important;
+    background: #ffffff !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 1rem !important;
+    max-width: 90vw !important;
+    width: 400px !important;
+    font-family: var(--font-sans) !important;
+}
+
+.p-confirm-dialog .p-dialog-header {
+    border-bottom: 1px solid #f3f4f6 !important;
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    padding: 1.25rem 1.5rem !important;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+}
+
+.p-confirm-dialog .p-dialog-title {
+    font-weight: 600 !important;
+    font-size: 1.125rem !important;
+}
+
+.p-confirm-dialog .p-dialog-content {
+    background: #ffffff !important;
+    color: #4b5563 !important;
+    padding: 1.5rem 1.5rem !important;
+    font-size: 1rem !important;
+}
+
+.p-confirm-dialog .p-dialog-footer {
+    border-top: 1px solid #f3f4f6 !important;
+    background: #f9fafb !important;
+    padding: 1rem 1.5rem !important;
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 0.75rem !important;
+}
+
+/* Force Button Styles in Dialog */
+.p-confirm-dialog .p-dialog-footer button {
+    margin: 0 !important;
+    padding: 0.625rem 1.25rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    border-radius: 0.5rem !important;
+    transition: all 0.2s !important;
+}
+
+/* Force Accept Button (Indigo/Blue) */
+.p-confirm-dialog .p-dialog-footer .p-confirm-dialog-accept {
+    background-color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary) !important;
+    color: white !important;
+}
+
+.p-confirm-dialog .p-dialog-footer .p-confirm-dialog-accept:hover {
+    background-color: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+}
+
+/* Force Reject Button (White/Gray) */
+.p-confirm-dialog .p-dialog-footer .p-confirm-dialog-reject {
+    background-color: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    color: #374151 !important;
+}
+
+.p-confirm-dialog .p-dialog-footer .p-confirm-dialog-reject:hover {
+    background-color: #f9fafb !important;
+    border-color: #9ca3af !important;
+}
+
+/* Icon Styling */
+.p-confirm-dialog .p-dialog-content i {
+    font-size: 2rem !important;
+    margin-right: 1rem !important;
+    color: var(--color-primary) !important;
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NICE GREEN美蔬菜廚房-後台管理</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Data Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/skin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="profile-element"><img src="img/logo.png" width="220" height="155"></li>
+                <li><a href="member-list.html"><span class="nav-label">會員列表</span> </a></li>
+                <li><a href="service-list.html"><span class="nav-label">客服列表</span></a></li>
+                <li><a href="cooperation-list.html"><span class="nav-label">合作提案</span></a></li>
+                <li><a href="order-list.html"><span class="nav-label">訂單列表</span></a></li>
+                <li><a href="admin-list.html"><span class="nav-label">管理者列表</span></a></li>
+                <li>
+                    <a href="#"><span class="nav-label">好商品管理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li ><a href="product-category-0.html">主類別管理</a></li>
+                        <li ><a href="product-category-1.html">次類別管理</a></li>
+                        <li ><a href="product-list.html">商品列表</a></li>
+                        <li ><a href="product-ad-list.html">廣告列表</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#"><span class="nav-label">好文章管理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li ><a href="article-category-0.html">主類別管理</a></li>
+                        <li ><a href="article-category-1.html">次類別管理</a></li>
+                        <li ><a href="article-list.html">文章列表</a></li>
+                        <li ><a href="article-ad-list.html">廣告列表</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="img-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">admin</span>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>文章類別列表</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">首頁</a>
+                        </li>
+                        <li>
+                            <a href="index.html">好文章管理</a>
+                        </li>
+                        <li class="active">
+                            <strong>次類別列表</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+               
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>次類別列表</h5>
+                    </div>
+                    <div class="ibox-content">
+                    <div class="explanation">
+                        <h4 class="note">操作流程：</h4>
+                        <ul class="decimal">
+                            <li>Step1：按下【新增主類別】按鈕,輸入您的【主類別】名稱。</li>
+                            <li>Step2：按下【新增次類別】按鈕,輸入您的【次類別】名稱後,並指定到【對應的主類別】當中。</li>
+                            <li>Step3：新增文章時,選擇此文章歸屬在那一種類別中。</li>
+                        </ul>
+                    </div>
+                    <div class="mb10"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus mr5" aria-hidden="true"></i>新增次類別</button></div>
+                    <table class="table table-striped table-bordered table-hover dataTables-example" >
+                    <thead>
+                    <tr>
+                        <th class="text-center" width="10%">編號</th>
+                        <th class="text-center" width="40%">次類別名稱</th>
+                        <th class="text-center" width="40%">對應主類別名稱</th>
+                        <th class="text-center" width="10%">功能</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td class="text-left">美蔬菜盒系列</td>
+                        <td class="text-left">經典招牌 美蔬菜</td>
+                        <td class="text-center"><a href="#" class="mr5">編輯</a><a href="#">刪除</a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2</td>
+                        <td class="text-left">免洗煮蔬菜系列</td>
+                        <td class="text-left">小資組合</td>
+                        <td class="text-center"><a href="#" class="mr5">編輯</a><a href="#">刪除</a></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> © Protype All Rights Reserved
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+
+    <!-- Data Tables -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+            $('.dataTables-example').dataTable({
+                responsive: true,
+                "dom": 'T<"clear">lfrtip',
+                "tableTools": {
+                    "sSwfPath": "js/plugins/dataTables/swf/copy_csv_xls_pdf.swf"
+                }
+            });
+
+            /* Init DataTables */
+            var oTable = $('#editable').dataTable();
+
+            /* Apply the jEditable handlers to the table */
+            oTable.$('td').editable( '../example_ajax.php', {
+                "callback": function( sValue, y ) {
+                    var aPos = oTable.fnGetPosition( this );
+                    oTable.fnUpdate( sValue, aPos[0], aPos[1] );
+                },
+                "submitdata": function ( value, settings ) {
+                    return {
+                        "row_id": this.parentNode.getAttribute('id'),
+                        "column": oTable.fnGetPosition( this )[2]
+                    };
+                },
+
+                "width": "90%",
+                "height": "100%"
+            } );
+
+
+        });
+
+        function fnClickAddRow() {
+            $('#editable').dataTable().fnAddData( [
+                "Custom row",
+                "New row",
+                "New row",
+                "New row",
+                "New row" ] );
+
+        }
+    </script>
+<style>
+    body.DTTT_Print {
+        background: #fff;
+
+    }
+    .DTTT_Print #page-wrapper {
+        margin: 0;
+        background:#fff;
+    }
+
+    button.DTTT_button, div.DTTT_button, a.DTTT_button {
+        border: 1px solid #e7eaec;
+        background: #fff;
+        color: #676a6c;
+        box-shadow: none;
+        padding: 6px 8px;
+    }
+    button.DTTT_button:hover, div.DTTT_button:hover, a.DTTT_button:hover {
+        border: 1px solid #d2d2d2;
+        background: #fff;
+        color: #676a6c;
+        box-shadow: none;
+        padding: 6px 8px;
+    }
+
+    .dataTables_filter label {
+        margin-right: 5px;
+
+    }
+</style>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">新增次類別</h4>
+      </div>
+      <div class="modal-body">
+      
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">次類別名稱</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">對應的主類別名稱</label>
+<select class="form-control">
+  <option>經典招牌 美蔬菜</option>
+  <option>小資組合</option>
+</select>
+  </div>
+</form>
+        
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
